@@ -143,3 +143,9 @@
 /Users/alame/devvault/src/DevVault.Api/obj/Debug/net9.0/DevVault.Api.pdb
 /Users/alame/devvault/src/DevVault.Api/obj/Debug/net9.0/DevVault.Api.genruntimeconfig.cache
 /Users/alame/devvault/src/DevVault.Api/obj/Debug/net9.0/ref/DevVault.Api.dll
+/Users/alame/devvault/src/DevVault.Api/bin/Debug/net9.0/Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+/Users/alame/devvault/src/DevVault.Api/bin/Debug/net9.0/Microsoft.Extensions.Configuration.FileExtensions.dll
+/Users/alame/devvault/src/DevVault.Api/bin/Debug/net9.0/Microsoft.Extensions.Configuration.Json.dll
+/Users/alame/devvault/src/DevVault.Api/bin/Debug/net9.0/Microsoft.Extensions.FileProviders.Abstractions.dll
+/Users/alame/devvault/src/DevVault.Api/bin/Debug/net9.0/Microsoft.Extensions.FileProviders.Physical.dll
+/Users/alame/devvault/src/DevVault.Api/bin/Debug/net9.0/Microsoft.Extensions.FileSystemGlobbing.dll

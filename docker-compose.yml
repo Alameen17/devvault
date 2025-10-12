@@ -1,0 +1,48 @@
+version: "3.9"  
+
+services:
+  devvault_postgres:
+    image: postgres:16
+    container_name: devvault_postgres
+    environment:
+      POSTGRES_USER: auth
+      POSTGRES_PASSWORD: auth
+      POSTGRES_DB: authdb
+    ports:
+      - "5433:5432"  
+    volumes:
+      - devvault_pgdata:/var/lib/postgresql/data
+    networks:
+      - devvault-network
+
+  redis:
+    image: redis:7
+    container_name: devvault_redis
+    ports:
+      - "6379:6379"
+    networks:
+      - devvault-network
+
+  auth.api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: devvault_api
+    ports:
+      - "8080:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__DefaultConnection: Host=devvault_postgres;Port=5432;Database=authdb;Username=auth;Password=auth
+      Redis__ConnectionString: devvault_redis:6379
+    depends_on:
+      - devvault_postgres
+      - redis
+    networks:
+      - devvault-network
+
+networks:
+  devvault-network:
+    driver: bridge
+
+volumes:
+  devvault_pgdata:
