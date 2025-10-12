@@ -1,0 +1,11 @@
+/Users/alame/devvault/src/DevVault.Domain/bin/Debug/net9.0/DevVault.Domain.deps.json
+/Users/alame/devvault/src/DevVault.Domain/bin/Debug/net9.0/DevVault.Domain.dll
+/Users/alame/devvault/src/DevVault.Domain/bin/Debug/net9.0/DevVault.Domain.pdb
+/Users/alame/devvault/src/DevVault.Domain/obj/Debug/net9.0/DevVault.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/alame/devvault/src/DevVault.Domain/obj/Debug/net9.0/DevVault.Domain.AssemblyInfoInputs.cache
+/Users/alame/devvault/src/DevVault.Domain/obj/Debug/net9.0/DevVault.Domain.AssemblyInfo.cs
+/Users/alame/devvault/src/DevVault.Domain/obj/Debug/net9.0/DevVault.Domain.csproj.CoreCompileInputs.cache
+/Users/alame/devvault/src/DevVault.Domain/obj/Debug/net9.0/DevVault.Domain.dll
+/Users/alame/devvault/src/DevVault.Domain/obj/Debug/net9.0/refint/DevVault.Domain.dll
+/Users/alame/devvault/src/DevVault.Domain/obj/Debug/net9.0/DevVault.Domain.pdb
+/Users/alame/devvault/src/DevVault.Domain/obj/Debug/net9.0/ref/DevVault.Domain.dll

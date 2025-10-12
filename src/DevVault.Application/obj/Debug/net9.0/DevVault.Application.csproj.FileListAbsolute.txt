@@ -1,0 +1,15 @@
+/Users/alame/devvault/src/DevVault.Application/bin/Debug/net9.0/DevVault.Application.deps.json
+/Users/alame/devvault/src/DevVault.Application/bin/Debug/net9.0/DevVault.Application.dll
+/Users/alame/devvault/src/DevVault.Application/bin/Debug/net9.0/DevVault.Application.pdb
+/Users/alame/devvault/src/DevVault.Application/bin/Debug/net9.0/DevVault.Domain.dll
+/Users/alame/devvault/src/DevVault.Application/bin/Debug/net9.0/DevVault.Domain.pdb
+/Users/alame/devvault/src/DevVault.Application/obj/Debug/net9.0/DevVault.Application.csproj.AssemblyReference.cache
+/Users/alame/devvault/src/DevVault.Application/obj/Debug/net9.0/DevVault.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/alame/devvault/src/DevVault.Application/obj/Debug/net9.0/DevVault.Application.AssemblyInfoInputs.cache
+/Users/alame/devvault/src/DevVault.Application/obj/Debug/net9.0/DevVault.Application.AssemblyInfo.cs
+/Users/alame/devvault/src/DevVault.Application/obj/Debug/net9.0/DevVault.Application.csproj.CoreCompileInputs.cache
+/Users/alame/devvault/src/DevVault.Application/obj/Debug/net9.0/DevVault.FBCD25A5.Up2Date
+/Users/alame/devvault/src/DevVault.Application/obj/Debug/net9.0/DevVault.Application.dll
+/Users/alame/devvault/src/DevVault.Application/obj/Debug/net9.0/refint/DevVault.Application.dll
+/Users/alame/devvault/src/DevVault.Application/obj/Debug/net9.0/DevVault.Application.pdb
+/Users/alame/devvault/src/DevVault.Application/obj/Debug/net9.0/ref/DevVault.Application.dll
