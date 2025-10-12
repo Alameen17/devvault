@@ -149,3 +149,6 @@
 /Users/alame/devvault/src/DevVault.Api/bin/Debug/net9.0/Microsoft.Extensions.FileProviders.Abstractions.dll
 /Users/alame/devvault/src/DevVault.Api/bin/Debug/net9.0/Microsoft.Extensions.FileProviders.Physical.dll
 /Users/alame/devvault/src/DevVault.Api/bin/Debug/net9.0/Microsoft.Extensions.FileSystemGlobbing.dll
+/Users/alame/devvault/src/DevVault.Api/bin/Debug/net9.0/Swashbuckle.AspNetCore.Swagger.dll
+/Users/alame/devvault/src/DevVault.Api/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/alame/devvault/src/DevVault.Api/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll
