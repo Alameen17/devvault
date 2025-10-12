@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DevVault.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3aa2c07b3dc800442d48b56edd034e76497e3012")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+deb33b34c1b002a765482202d51d925b0ccd5e2a")]
 [assembly: System.Reflection.AssemblyProductAttribute("DevVault.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DevVault.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
