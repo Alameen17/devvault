@@ -152,3 +152,4 @@
 /Users/alame/devvault/src/DevVault.Api/bin/Debug/net9.0/Swashbuckle.AspNetCore.Swagger.dll
 /Users/alame/devvault/src/DevVault.Api/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll
 /Users/alame/devvault/src/DevVault.Api/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/alame/devvault/src/DevVault.Api/bin/Debug/net9.0/Scalar.AspNetCore.dll

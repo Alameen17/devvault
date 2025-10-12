@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "YMMVSFFeX4o=",
+  "dgSpecHash": "8zI2sN5spDk=",
   "success": true,
   "projectFilePath": "/Users/alame/devvault/src/DevVault.Api/DevVault.Api.csproj",
   "expectedPackageFiles": [
@@ -49,6 +49,7 @@
     "/Users/alame/.nuget/packages/mono.texttemplating/3.0.0/mono.texttemplating.3.0.0.nupkg.sha512",
     "/Users/alame/.nuget/packages/npgsql/9.0.3/npgsql.9.0.3.nupkg.sha512",
     "/Users/alame/.nuget/packages/npgsql.entityframeworkcore.postgresql/9.0.4/npgsql.entityframeworkcore.postgresql.9.0.4.nupkg.sha512",
+    "/Users/alame/.nuget/packages/scalar.aspnetcore/2.8.11/scalar.aspnetcore.2.8.11.nupkg.sha512",
     "/Users/alame/.nuget/packages/swashbuckle.aspnetcore/9.0.6/swashbuckle.aspnetcore.9.0.6.nupkg.sha512",
     "/Users/alame/.nuget/packages/swashbuckle.aspnetcore.swagger/9.0.6/swashbuckle.aspnetcore.swagger.9.0.6.nupkg.sha512",
     "/Users/alame/.nuget/packages/swashbuckle.aspnetcore.swaggergen/9.0.6/swashbuckle.aspnetcore.swaggergen.9.0.6.nupkg.sha512",
