@@ -5,6 +5,7 @@
 /Users/alame/devvault/src/DevVault.Domain/obj/Debug/net9.0/DevVault.Domain.AssemblyInfoInputs.cache
 /Users/alame/devvault/src/DevVault.Domain/obj/Debug/net9.0/DevVault.Domain.AssemblyInfo.cs
 /Users/alame/devvault/src/DevVault.Domain/obj/Debug/net9.0/DevVault.Domain.csproj.CoreCompileInputs.cache
+/Users/alame/devvault/src/DevVault.Domain/obj/Debug/net9.0/DevVault.Domain.sourcelink.json
 /Users/alame/devvault/src/DevVault.Domain/obj/Debug/net9.0/DevVault.Domain.dll
 /Users/alame/devvault/src/DevVault.Domain/obj/Debug/net9.0/refint/DevVault.Domain.dll
 /Users/alame/devvault/src/DevVault.Domain/obj/Debug/net9.0/DevVault.Domain.pdb

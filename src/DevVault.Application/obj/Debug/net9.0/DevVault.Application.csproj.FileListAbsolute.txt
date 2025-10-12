@@ -8,6 +8,7 @@
 /Users/alame/devvault/src/DevVault.Application/obj/Debug/net9.0/DevVault.Application.AssemblyInfoInputs.cache
 /Users/alame/devvault/src/DevVault.Application/obj/Debug/net9.0/DevVault.Application.AssemblyInfo.cs
 /Users/alame/devvault/src/DevVault.Application/obj/Debug/net9.0/DevVault.Application.csproj.CoreCompileInputs.cache
+/Users/alame/devvault/src/DevVault.Application/obj/Debug/net9.0/DevVault.Application.sourcelink.json
 /Users/alame/devvault/src/DevVault.Application/obj/Debug/net9.0/DevVault.FBCD25A5.Up2Date
 /Users/alame/devvault/src/DevVault.Application/obj/Debug/net9.0/DevVault.Application.dll
 /Users/alame/devvault/src/DevVault.Application/obj/Debug/net9.0/refint/DevVault.Application.dll
