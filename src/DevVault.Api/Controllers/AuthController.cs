@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Cryptography;
 using System.Text;
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
 
 namespace DevVault.Api.Controllers
 {
@@ -50,6 +52,19 @@ namespace DevVault.Api.Controllers
 
             var token = _jwtService.GenerateToken(user.Id, user.Email, user.Role);
             return Ok(new { token });
+        }
+
+        [HttpGet("me")]
+        [Authorize]
+        public IActionResult GetCurrentUser()
+        {
+            var username = User.Identity?.Name;
+            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            
+            return Ok(new { 
+                username = username,
+                userId = userId
+            });
         }
 
         private static string HashPassword(string password)
