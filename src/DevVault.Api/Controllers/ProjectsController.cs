@@ -36,14 +36,27 @@ namespace DevVault.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateProject(Project project)
+        [Authorize]
+        public async Task<IActionResult> CreateProject([FromBody] CreateProjectRequest request)
         {
-            project.OwnerId = GetUserId();
+            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            if (userId == null)
+                return Unauthorized();
+
+            var project = new Project
+            {
+                Name = request.Name,
+                Description = request.Description,
+                CreatedAt = DateTime.UtcNow,
+                OwnerId = Guid.Parse(userId)
+            };
+
             _context.Projects.Add(project);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetUserProjects), new { id = project.Id }, project);
+            return Ok(project);
         }
+
 
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateProject(Guid id, Project updated)
