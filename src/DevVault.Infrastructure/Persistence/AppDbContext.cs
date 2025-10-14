@@ -16,5 +16,8 @@ namespace DevVault.Infrastructure.Persistence
             base.OnModelCreating(builder);
             builder.Entity<User>().HasIndex(u => u.Email).IsUnique();
         }
+
+        public DbSet<Project> Projects => Set<Project>();
     }
+
 }
