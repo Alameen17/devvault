@@ -78,5 +78,32 @@ namespace DevVault.Api.Controllers
                 CreatedAt = task.CreatedAt
             });
         }
+
+        [HttpPut("{id:guid}")]
+        public async Task<IActionResult> UpdateTask(Guid id, [FromBody] TaskItem updatedTask)
+        {
+            var existingTask = await _context.Tasks.FindAsync(id);
+            if (existingTask == null)
+                return NotFound();
+
+            existingTask.Title = updatedTask.Title ?? existingTask.Title;
+            existingTask.Description = updatedTask.Description ?? existingTask.Description;
+            existingTask.IsCompleted = updatedTask.IsCompleted;
+
+            await _context.SaveChangesAsync();
+            return Ok(existingTask);
+        }
+
+        [HttpDelete("{id:guid}")]
+        public async Task<IActionResult> DeleteTask(Guid id)
+        {
+            var task = await _context.Tasks.FindAsync(id);
+            if (task == null)
+                return NotFound();
+
+            _context.Tasks.Remove(task);
+            await _context.SaveChangesAsync();
+            return NoContent();
+        }
     }
 }
