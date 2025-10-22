@@ -1,156 +1,239 @@
-DevVault — Project & Task Management API
+# 🔐 DevVault
 
-DevVault is a .NET 9-based backend API for managing projects, tasks, and users. It’s designed to demonstrate real-world backend engineering skills — including authentication, database migrations, dependency injection, Dockerized services, and clean architecture principles.
+> A modern, production-ready Project & Task Management API built with .NET 9
 
-Tech Stack
+DevVault is a robust backend API showcasing real-world engineering practices including JWT authentication, clean architecture, Docker containerization, and comprehensive API documentation.
 
-Language	C# (.NET 9)
-Framework	ASP.NET Core Web API
-ORM	Entity Framework Core (PostgreSQL provider)
-Database	PostgreSQL 16
-Caching	Redis 7
-Containerization	Docker & Docker Compose
-Documentation / Testing	Scalar API Docs
-Authentication	JWT Bearer Tokens
-Architecture	Clean Architecture (CQRS-style separation)
+![.NET](https://img.shields.io/badge/.NET-9.0-512BD4?style=flat-square&logo=dotnet)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-336791?style=flat-square&logo=postgresql)
+![Redis](https://img.shields.io/badge/Redis-7-DC382D?style=flat-square&logo=redis)
+![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=flat-square&logo=docker)
 
-Features
+## ✨ Features
 
-JWT Authentication (Register, Login, Token refresh)
+- **🔒 JWT Authentication** - Secure user registration, login, and token refresh
+- **👥 User Management** - Complete user CRUD with bcrypt password hashing
+- **📁 Project Management** - Full CRUD operations for project organization
+- **✅ Task Management** - Create, update, and track tasks within projects
+- **🐳 Docker Environment** - One-command setup with PostgreSQL, Redis, and API
+- **📚 Auto Documentation** - Beautiful Scalar UI for API testing
+- **🏗️ Clean Architecture** - CQRS-style separation of concerns
+- **🔄 Database Migrations** - Automated schema management with EF Core
 
-Users — secure user management with hashed passwords
+## 🛠️ Tech Stack
 
-Projects — full CRUD endpoints (create, read, update, delete)
+| Category | Technology |
+|----------|-----------|
+| **Language** | C# (.NET 9) |
+| **Framework** | ASP.NET Core Web API |
+| **ORM** | Entity Framework Core |
+| **Database** | PostgreSQL 16 |
+| **Caching** | Redis 7 |
+| **Authentication** | JWT Bearer Tokens |
+| **Containerization** | Docker & Docker Compose |
+| **Documentation** | Scalar API Docs |
 
-Tasks — CRUD endpoints linked to Projects
+## 📂 Project Structure
 
-Dockerized Environment — PostgreSQL + Redis + API
-
-EF Core Migrations — automated schema management
-
-Scalar UI — beautiful, interactive API testing interface
-
-Project Structure
+```
 DevVault/
 ├── src/
-│   ├── DevVault.Api/               # ASP.NET Core entry point (controllers)
-│   ├── DevVault.Application/       # Business logic, service interfaces
-│   ├── DevVault.Domain/            # Core entities and domain models
-│   └── DevVault.Infrastructure/    # Persistence (EF Core), JWT, data access
-├── docker-compose.yml              # Full environment (Postgres + Redis + API)
+│   ├── DevVault.Api/            # Controllers & API entry point
+│   ├── DevVault.Application/    # Business logic & services
+│   ├── DevVault.Domain/         # Core entities & domain models
+│   └── DevVault.Infrastructure/ # Data access & external services
+├── docker-compose.yml
 └── README.md
+```
 
-Running the Project with Docker
+## 🚀 Quick Start
 
-Make sure you have Docker and .NET SDK 9 installed.
+### Prerequisites
 
-1️⃣ Build & Start Services
+- [.NET SDK 9](https://dotnet.microsoft.com/download)
+- [Docker Desktop](https://www.docker.com/products/docker-desktop)
+
+### 1. Clone & Setup
+
+```bash
+git clone https://github.com/Alameen17/devvault.git
+cd devvault
+```
+
+### 2. Start Services
+
+```bash
 docker compose up -d --build
+```
 
+This launches:
+- **PostgreSQL** on `localhost:5432`
+- **Redis** on `localhost:6379`
+- **API** on `localhost:5057`
 
-This will spin up:
+### 3. Apply Database Migrations
 
-postgres (on port 5432)
-
-redis (on port 6379)
-
-devvault.api (on port 5057)
-
-2️⃣ Apply EF Core Migrations
+```bash
 dotnet ef database update -p src/DevVault.Infrastructure -s src/DevVault.Api
+```
 
-3️⃣ Open API Docs
+### 4. Explore the API
 
-Visit the port hosting when you run the project
-
+Open your browser to:
+```
 http://localhost:5057/scalar/v1
+```
 
-🔑 Authentication Workflow
+## 🔑 Authentication Flow
 
-Register
+### Register a New User
 
+```http
 POST /api/auth/register
+Content-Type: application/json
 
+{
+  "username": "john_doe",
+  "email": "john@example.com",
+  "password": "SecurePass123!"
+}
+```
 
-Login
+### Login
 
+```http
 POST /api/auth/login
+Content-Type: application/json
 
+{
+  "email": "john@example.com",
+  "password": "SecurePass123!"
+}
+```
 
-Returns a JWT token.
+**Response:**
+```json
+{
+  "token": "eyJhbGciOiJIUzI1NiIs...",
+  "expiresAt": "2025-10-23T12:00:00Z"
+}
+```
 
-Use the token in the Authorization header:
+### Authenticate Requests
 
-Authorization: Bearer <your_token>
+Add the token to all protected endpoints:
 
-Enpoints Examples
-Create Project
+```http
+Authorization: Bearer eyJhbGciOiJIUzI1NiIs...
+```
+
+## 📋 API Examples
+
+### Create Project
+
+```http
 POST /api/projects
-
-Content-Type: application/json
 Authorization: Bearer <token>
+Content-Type: application/json
 
 {
-  "name": "My Project",
-  "description": "Test project"
+  "name": "Mobile App Redesign",
+  "description": "Complete UI/UX overhaul for iOS and Android"
 }
+```
 
-Create Task
+### Create Task
+
+```http
 POST /api/tasks/{projectId}
-Content-Type: application/json
 Authorization: Bearer <token>
+Content-Type: application/json
 
 {
-  "title": "Setup backend",
-  "description": "Implement API endpoints"
+  "title": "Design authentication flow",
+  "description": "Create wireframes for login and signup screens"
 }
+```
 
-Update Task
+### Update Task
+
+```http
 PUT /api/tasks/{taskId}
-Content-Type: application/json
 Authorization: Bearer <token>
+Content-Type: application/json
 
 {
-  "title": "Setup backend core",
-  "description": "Add EF migrations and Docker support",
+  "title": "Design authentication flow",
+  "description": "Wireframes completed and approved",
   "isCompleted": true
 }
+```
 
-Delete Task
+### Delete Task
+
+```http
 DELETE /api/tasks/{taskId}
 Authorization: Bearer <token>
+```
 
-Developer Commands
-Command	Description
-dotnet restore	Restore NuGet packages
-dotnet build	Build all projects
-dotnet run --project src/DevVault.Api	Run API locally
-dotnet ef migrations add <Name> -p src/DevVault.Infrastructure -s src/DevVault.Api	Add migration
-dotnet ef database update	Apply migrations
+## 🧪 Testing with Scalar
 
+1. Navigate to `http://localhost:5057/scalar/v1`
+2. Click **Authorize** and paste your JWT token
+3. Select any endpoint to test
+4. View real-time request/response examples
 
-Testing with Scalar
+![Scalar UI Preview](https://scalar.com/images/scalar-preview.png)
 
-Navigate to:
+## 💻 Development Commands
 
-http://localhost:5057/scalar/v1
+| Command | Description |
+|---------|-------------|
+| `dotnet restore` | Restore NuGet packages |
+| `dotnet build` | Build all projects |
+| `dotnet run --project src/DevVault.Api` | Run API locally |
+| `dotnet ef migrations add <Name> -p src/DevVault.Infrastructure -s src/DevVault.Api` | Create migration |
+| `dotnet ef database update -p src/DevVault.Infrastructure -s src/DevVault.Api` | Apply migrations |
+| `docker compose down` | Stop all services |
+| `docker compose logs -f devvault.api` | View API logs |
 
+## 🎯 Roadmap
 
-Expand an endpoint (e.g. POST /api/projects)
+- [ ] **Role-Based Authorization** (Admin/User/Guest)
+- [ ] **Real-time Notifications** with SignalR
+- [ ] **File Attachments** for tasks
+- [ ] **Activity Logs** for audit trails
+- [ ] **React + TypeScript Frontend**
+- [ ] **CI/CD Pipeline** with GitHub Actions
+- [ ] **Cloud Deployment** (Azure/AWS/Fly.io)
 
+## 🤝 Contributing
 
-Enter payloads and JWT token — test endpoints directly in the UI.
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-Next Steps on this project
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-To Add Role-Based Authorization (Admin / User)
+## 📄 License
 
-Add Comments, Issues, and Activity Logs
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Build a React + TypeScript frontend
+## 👨‍💻 Author
 
-Deploy to Render / Azure / Fly.io
+**Alameen Adekunle**
 
-🧑‍💻 Author
+- GitHub: [@Alameen17](https://github.com/Alameen17)
+- LinkedIn: [Al-ameen Adekunle](https://www.linkedin.com/in/al-ameen-adekunle-2a085a1b5/)
 
-Alameen17
+---
+
+<p align="center">
+  Made with ❤️ by <a href="https://github.com/Alameen17">Alameen17</a>
+</p>
+
+<p align="center">
+  ⭐ Star this repo if you found it helpful!
+</p>
