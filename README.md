@@ -231,9 +231,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 <p align="center">
-  Made with ❤️ by <a href="https://github.com/Alameen17">Alameen17</a>
-</p>
-
-<p align="center">
   ⭐ Star this repo if you found it helpful!
 </p>
