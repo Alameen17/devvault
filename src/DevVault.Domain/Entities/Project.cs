@@ -10,5 +10,8 @@ namespace DevVault.Domain.Entities
         // Foreign key to User
         public Guid OwnerId { get; set; }
         public User Owner { get; set; } = null!;
+
+        public ICollection<TaskItem> Tasks { get; set; } = new List<TaskItem>();
+
     }
 }

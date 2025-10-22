@@ -18,6 +18,9 @@ namespace DevVault.Infrastructure.Persistence
         }
 
         public DbSet<Project> Projects => Set<Project>();
+
+        public DbSet<TaskItem> Tasks => Set<TaskItem>();
+
     }
 
 }
