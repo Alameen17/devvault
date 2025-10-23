@@ -25,6 +25,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\src\DevVault.Application\DevVault.Application.csproj" />
     <ProjectReference Include="..\..\src\DevVault.Domain\DevVault.Domain.csproj" />
+    <ProjectReference Include="..\..\src\DevVault.Api\DevVault.Api.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,6 @@
+{
+  "DevVault.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Users\/alame\/devvault\/src\/DevVault.Api",
+  "DevVault.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Users\/alame\/devvault\/src\/DevVault.Application",
+  "DevVault.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Users\/alame\/devvault\/src\/DevVault.Domain",
+  "DevVault.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Users\/alame\/devvault\/src\/DevVault.Infrastructure"
+}
